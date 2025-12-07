@@ -1,0 +1,160 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.space{
+  background-color: rgb(0, 0, 0);
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.sun{
+  background-color: rgb(236, 193, 4);
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  box-shadow: 0 0 2rem rgb(255, 0, 0), 0 0 10px lightblue;
+}
+
+.earth{
+  position: absolute;
+  width: 37px;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg,rgb(117, 117, 117) 0%, rgba(9, 9, 121, 1) 36%, rgba(3, 158, 37, 1) 98%);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgb(27, 7, 158), 0 0 40px rgb(6, 156, 206);
+  animation: earth 8s linear infinite;
+}
+
+
+.moon{
+  background-color: rgba(245, 222, 179, 0.423);
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  animation: moon 2s linear infinite;
+}
+
+.path{
+  position: absolute;
+  border: 1px dotted rgba(255, 255, 255, 0.379);
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+.orbit-earth{
+  height: 400px;
+  width: 400px;
+}
+.orbit-moon{
+  height: 100px;
+  width: 100px;
+  opacity: 0.3;
+}
+
+.star{
+
+  background-color: white;
+  position: fixed;
+  text-align: center;
+  top: 50px;   
+  left: 50px;
+  height: 20px;
+  width: 20px;
+  border-radius: 40%;
+  box-shadow: 0 0 20px lightblue, 0 0 60px lightblue;
+}
+.mars{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(212, 160, 96);
+  animation: mars 15s linear infinite;
+  box-shadow: 0 0 2rem rgb(217, 189, 132);
+  
+}
+.orbit-mars{
+  height: 560px;
+  width: 560px;
+}
+
+.venus{
+  position: absolute;
+  height: 29px;
+  width: 27px;
+  border-radius: 50%;
+  background-color: rgb(248, 135, 6);
+  background: linear-gradient(66deg, rgba(255, 247, 0, 1) 0%, rgba(255, 0, 0, 1) 50%, rgba(207, 120, 0, 1) 100%);
+  box-shadow: 0 0 2rem rgb(248, 165, 0);
+  animation: venus 6s linear infinite;
+}
+.mercury{
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(248, 135, 6);
+  box-shadow: 0 0 2rem rgb(248, 165, 0);
+  animation: mercury 4s linear infinite;
+}
+
+.orbit-venus{
+  height: 260px;
+  width: 260px;
+}
+.orbit-mercury{
+  height: 140px;
+  width: 140px;
+}
+@keyframes venus{
+  0%{
+    transform: rotate(0deg) translateX(-130px);
+  }
+  100%{
+    transform: rotate(360deg) translateX(-130px);
+  }
+}
+@keyframes mercury{
+  0%{
+    transform: rotate(0deg) translateY(70px);
+  }
+  100%{
+    transform: rotate(360deg) translateY(70px);
+  }
+}
+@keyframes mars{
+  0%{
+    transform: rotate(0deg) translateY(280px);
+  }
+  100%{
+    transform: rotate(360deg) translateY(280px);
+  }
+}
+
+@keyframes earth {
+  from{
+    transform: rotate(0deg) translateX(200px);
+  }
+  to{
+    transform: rotate(360deg) translateX(200px);
+  }
+}
+
+
+@keyframes moon {
+   0%{
+    transform: rotate(0deg) translateY(50px);
+  }
+  100%{
+    transform: rotate(360deg) translateY(50px);
+  }
+}
+
+
